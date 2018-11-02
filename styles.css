@@ -1,0 +1,53 @@
+html {
+    font-weight: 300px;
+}
+.hh {
+    font-size: 34px;
+}
+
+body {
+    background: linear-gradient(to right, #f857a6, #ff5858);
+    font-family: 'Open Sans', sans-serif;
+    /* display: flex;
+    align-content: left; */
+}
+.frm {
+    /* display: inline-block;
+    text-align: center; */
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 5px;
+    padding: 16px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.completebtn {
+    background-color: white;
+    color: #ff69b4;
+
+}
+
+.btn {
+    background-color: #ff69b4;
+    color: white;
+    width: 100%;
+}
+.p1 {
+    display: inline;
+}
+.p2 {
+    display: inline;
+    
+}
+.in1 {
+    width: 100%;
+}
+
+.in2 {
+    width: 100%;
+}
