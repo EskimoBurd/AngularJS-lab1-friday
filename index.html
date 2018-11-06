@@ -14,17 +14,21 @@
         <form class="frm">
         <h2 class= "hh">TODO List</h2>
         <p>A place to store the things you have to do!</p>
-        <input text="text" class="in1" placeholder="Filter your to-dos">
+        <input text="text" class="in1" placeholder="Filter your to-dos" ng-model="TodoCtrl.tasks">
         <ol>
-            <li ng-repeat="task in $ctrl.tasks" 
+            <li ng-repeat="task in $ctrl.tasks | filter: TodoCtrl.tasks" 
             ng-class="{'completed': task.completed === true}">
-                <button ng-click="" ng-if="task.completed === false" class="completebtn">Complete</button>
+                <button 
+                ng-click="#ctrl.completeTask(complete)" 
+                ng-if="task.completed === false" 
+                class="completebtn">Complete</button>
                 <p class="p1">{{ task.task }}</p>
-                <p class="p2"><i class="material-icons">close</i></p>
+                <p class="p2" ng-click="$ctrl.removeTask($index)"><i class="material-icons">close</i></p>
+                <!-- -------------------- always makes sure theses match with our controller-->
             </li>
         </ol>
-        <input type="text" class="in2" placeholder="Add your to do">
-        <button class= "btn">Add</button>
+        <input type="text" class="in2" placeholder="Add your to do" ng-model="newToDo">
+        <button class= "btn" ng-click="$ctrl.addTask(newToDo)">Add</button>
         </form>
     </section>
   

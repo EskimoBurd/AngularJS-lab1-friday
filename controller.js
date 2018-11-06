@@ -11,6 +11,23 @@ function TodoCtrl (){
 
     ]
 
+    // vm.textToDisplay = [];
+    
+    vm.addTask = (newToDo) => {
+        console.log(newToDo)
+        vm.tasks.push(angular.copy({task: newToDo, completed: false }));
+        //completed = false;
+    }
+
+    vm.removeTask = (index) => {
+        console.log(index)
+        vm.tasks.splice(index, 1)
+    }
+
+    vm.completeTask = (complete) => {
+        vm.tasks[index].complete = true;
+
+    }
 
 
 }
